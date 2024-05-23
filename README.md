@@ -1,5 +1,16 @@
-![Uploading image.png…]()
 
+## Examen - Economic
+ 
+Se desea visualizar qué restaurantes son económicos en el listado de restaurantes del propietario y que aparezca una etiqueta € similar a la mostrada en la captura (en brandSuccess, abajo y a la derecha) cuando un restaurante sea económico, y dos símbolos de euro €€ cuando el restaurante no lo sea (en brandPrimary, abajo y a la derecha).
+
+Para ello, cuando se da de alta un producto de un restaurante se deberá computar el precio medio de los productos del resto de restaurantes y compararlo con el precio medio de los productos del restaurante actual, incluyendo el producto recién creado.
+
+Se considerará económico a aquellos restaurantes cuyo precio medio de productos sea inferior al precio medio del resto en el momento de la creación del producto.
+
+Nota1: Para hacer un filtrado de productos cuyo restaurante sea distinto del restaurante actual puede usar el operador not equal (Sequelize.Op.ne)
+Nota2: Para computar el valor medio de una columna, deberá usar la función Sequelize.fn ('AVG', Sequelize.col('columnName')).
+
+Para mayor claridad, puede observar el uso de estos operadores en el siguiente ejemplo donde se computa la media de los costes de envío de los pedidos que no se corresponden con el usuario currentUserId:
 
 ## Introducción
 
